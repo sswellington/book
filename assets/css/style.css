@@ -1,0 +1,142 @@
+/* https://github.com/fireship-io/222-responsive-icon-nav-css */
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    text-align:justify;
+  
+    /* set colors */
+    --text-primary: #23232e;
+    --text-secondary: #141418;
+    --bg-primary: #ffffff; 
+    --bg-secondary: #b6b6b6;            /* = --scrollbar-primary */
+    --scrollbar-secondary: #e79428;
+    --fa-primary: rgb(0, 102, 255);
+    --fa-secondary: rgb(0, 162, 255) ;
+  
+    --transition-speed: 750ms;
+  }
+  
+  a {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  body {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    margin: 20;
+    padding: 20;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+    /* opinionated: No scrollbar in nav*/ 
+    background: var(--bg-secondary);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-secondary);
+  }
+  
+  main {
+    margin-left: 15rem;
+    margin-right: 15rem;
+    padding: 12rem;
+    line-height: 1.5;
+    text-indent: 1.5em;
+  }
+  
+  .link-text {
+    display: none;
+    margin-left: 1rem;
+  }
+  
+  .fa-primary {
+    color: var(--fa-primary);
+  }
+  
+  .fa-secondary {
+    color: var(--fa-secondary);
+  }
+  
+  .fa-primary,
+  .fa-secondary {
+    transition: var(--transition-speed);
+  }
+  
+  .logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+  }
+  
+  .logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+  }
+  
+  .logo-text
+  {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+  }
+  
+  
+  /* Small screens */
+  @media only screen and (max-width: 600px) {
+    .logo {
+      display: none;
+    }
+  
+    main {
+      margin: 0;
+    }
+  }
+  
+  .theme-icon {
+    display: none;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #495057;
+    color: #fff !important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin-right: 1rem;
+  }
+  
+  .social-icons a:last-child {
+    margin-right: 0;
+  }
+  
+  .social-icons a:hover {
+    background-color: #0057b4;
+  }
+
+  .dev-icons {
+    font-size: 3rem;
+  }
+  
+  .dev-icons .list-inline-item i:hover {
+    color: #0057b4;
+  }
